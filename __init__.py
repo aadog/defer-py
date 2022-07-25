@@ -48,7 +48,7 @@ class DefersContainer(object):
         return __suppress__
 
 
-def defers_collector(func):
+def with_defer(func):
     def __wrap__(*args, **kwargs):
         __defers__ = DefersContainer()
         with __defers__:
